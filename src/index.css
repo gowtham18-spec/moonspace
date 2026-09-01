@@ -116,3 +116,57 @@
     @apply absolute left-8 top-0 bottom-0 w-px bg-gradient-to-b from-primary via-secondary to-accent;
   }
 }
+
+@layer components {
+  .nebula-layer {
+    position: absolute;
+    inset: -25%;
+    filter: blur(70px);
+    opacity: 0.4;
+    will-change: transform;
+  }
+
+  .nebula-a {
+    background:
+      radial-gradient(closest-side at 30% 40%, hsl(258 90% 60% / 0.22), transparent 70%),
+      radial-gradient(closest-side at 70% 30%, hsl(210 90% 55% / 0.16), transparent 70%);
+    animation: nebula-drift-a 90s ease-in-out infinite alternate;
+  }
+
+  .nebula-b {
+    background:
+      radial-gradient(closest-side at 65% 70%, hsl(187 94% 50% / 0.12), transparent 70%),
+      radial-gradient(closest-side at 25% 80%, hsl(280 80% 55% / 0.16), transparent 70%);
+    animation: nebula-drift-b 120s ease-in-out infinite alternate;
+  }
+
+  .galaxy-smudge {
+    position: absolute;
+    width: 260px;
+    height: 90px;
+    border-radius: 9999px;
+    filter: blur(22px);
+    opacity: 0.35;
+    transform: rotate(-24deg);
+    background: radial-gradient(closest-side, hsl(210 100% 88% / 0.45), hsl(258 90% 70% / 0.18), transparent 75%);
+  }
+
+  .moon-aura {
+    background: radial-gradient(circle at center, hsl(200 100% 85% / 0.16), hsl(210 90% 60% / 0.07) 45%, transparent 70%);
+    filter: blur(30px);
+  }
+}
+
+@keyframes nebula-drift-a {
+  from { transform: translate3d(-2%, -1%, 0) scale(1); }
+  to { transform: translate3d(3%, 2%, 0) scale(1.12); }
+}
+
+@keyframes nebula-drift-b {
+  from { transform: translate3d(2%, 1%, 0) scale(1.08); }
+  to { transform: translate3d(-3%, -2%, 0) scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nebula-layer { animation: none; }
+}

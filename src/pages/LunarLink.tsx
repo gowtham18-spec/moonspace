@@ -8,6 +8,8 @@ import {
 } from 'lucide-react';
 import HeroScene from '@/components/3d/HeroScene';
 import MoonScene from '@/components/3d/MoonScene';
+import CosmicBackground from '@/components/CosmicBackground';
+
 
 // --- UI Primitives ---
 
@@ -109,8 +111,10 @@ const MoonSpaceSystem = () => {
   ];
 
   return (
-    <div className="bg-background text-foreground overflow-x-hidden">
+    <div className="relative bg-background text-foreground overflow-x-hidden">
+      <CosmicBackground />
       {/* Progress Bar */}
+
       <motion.div className="fixed top-0 left-0 right-0 h-0.5 bg-primary z-[60] origin-left" style={{ scaleX }} />
 
       {/* Navigation */}
@@ -370,7 +374,9 @@ const MoonSpaceSystem = () => {
           <SectionTitle subtitle="Interactive" title="Explore The" highlight="Surface" />
           <div className="grid lg:grid-cols-2 gap-8 items-center">
             <div className="relative h-[500px] rounded-2xl overflow-hidden border border-border/50">
+              <div className="moon-aura pointer-events-none absolute inset-0 z-0" />
               <MoonScene onLocationClick={setSelectedLocation} />
+
             </div>
 
             <div className="space-y-6">
