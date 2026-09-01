@@ -1,4 +1,4 @@
-import LunarLink from '@/pages/LunarLink';
+import MoonSpaceSystem from '@/pages/LunarLink';
 
-const Index = () => <LunarLink />;
+const Index = () => <MoonSpaceSystem />;
 export default Index;
