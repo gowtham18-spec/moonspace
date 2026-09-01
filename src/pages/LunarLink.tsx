@@ -50,7 +50,7 @@ const SectionTitle = ({ title, highlight, subtitle }: { title: string; highlight
 
 // --- Main Component ---
 
-const LunarLink = () => {
+const MoonSpaceSystem = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [bookingStep, setBookingStep] = useState(1);
   const [bookingData, setBookingData] = useState({
@@ -125,8 +125,8 @@ const LunarLink = () => {
               <Rocket className="w-5 h-5 text-primary-foreground" />
             </div>
             <div className="text-left">
-              <div className="font-display font-bold text-sm text-foreground">LUNARLINK</div>
-              <div className="text-[10px] text-muted-foreground tracking-widest">Transport Systems</div>
+              <div className="font-display font-bold text-sm text-foreground">MOON SPACE</div>
+              <div className="text-[10px] text-muted-foreground tracking-widest">System</div>
             </div>
           </motion.button>
 
@@ -209,7 +209,7 @@ const LunarLink = () => {
             transition={{ delay: 0.7 }}
             className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10"
           >
-            Experience the future of travel with LunarLink. 4-hour direct flights from Earth Spaceport to the Lunar Surface.
+            Experience the future of travel with Moon Space System. 4-hour direct flights from Earth Spaceport to the Lunar Surface.
           </motion.p>
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.9 }} className="flex flex-wrap gap-4 justify-center mb-12">
@@ -582,7 +582,7 @@ const LunarLink = () => {
                     <NeonButton
                       primary
                       onClick={() => {
-                        alert(`Booking Confirmed!\n\nThank you ${bookingData.name} for choosing LunarLink.\n\nYour journey to the Moon is scheduled. Check your email (${bookingData.email}) for boarding passes and pre-flight instructions.\n\nSee you in space! 🚀`);
+                        alert(`Booking Confirmed!\n\nThank you ${bookingData.name} for choosing Moon Space System.\n\nYour journey to the Moon is scheduled. Check your email (${bookingData.email}) for boarding passes and pre-flight instructions.\n\nSee you in space! 🚀`);
                         setBookingStep(1);
                         setBookingData({ date: '', package: 'standard', passengers: 1, name: '', email: '' });
                       }}
@@ -637,13 +637,13 @@ const LunarLink = () => {
             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
               <Rocket className="w-4 h-4 text-primary-foreground" />
             </div>
-            <span className="font-display font-bold text-sm text-foreground">LUNARLINK</span>
+            <span className="font-display font-bold text-sm text-foreground">MOON SPACE</span>
           </div>
-          <p className="text-xs text-muted-foreground">© 2026 LunarLink Transport Systems. All rights reserved.</p>
+          <p className="text-xs text-muted-foreground">© 2026 Moon Space System. All rights reserved.</p>
         </div>
       </footer>
     </div>
   );
 };
 
-export default LunarLink;
+export default MoonSpaceSystem;
