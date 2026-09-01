@@ -8,6 +8,8 @@ import {
 } from 'lucide-react';
 import HeroScene from '@/components/3d/HeroScene';
 import MoonScene from '@/components/3d/MoonScene';
+import CosmicBackground from '@/components/CosmicBackground';
+
 
 // --- UI Primitives ---
 
