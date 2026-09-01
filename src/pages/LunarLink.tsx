@@ -109,8 +109,10 @@ const MoonSpaceSystem = () => {
   ];
 
   return (
-    <div className="bg-background text-foreground overflow-x-hidden">
+    <div className="relative bg-background text-foreground overflow-x-hidden">
+      <CosmicBackground />
       {/* Progress Bar */}
+
       <motion.div className="fixed top-0 left-0 right-0 h-0.5 bg-primary z-[60] origin-left" style={{ scaleX }} />
 
       {/* Navigation */}
