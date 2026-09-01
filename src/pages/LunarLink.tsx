@@ -374,7 +374,9 @@ const MoonSpaceSystem = () => {
           <SectionTitle subtitle="Interactive" title="Explore The" highlight="Surface" />
           <div className="grid lg:grid-cols-2 gap-8 items-center">
             <div className="relative h-[500px] rounded-2xl overflow-hidden border border-border/50">
+              <div className="moon-aura pointer-events-none absolute inset-0 z-[1]" />
               <MoonScene onLocationClick={setSelectedLocation} />
+
             </div>
 
             <div className="space-y-6">
